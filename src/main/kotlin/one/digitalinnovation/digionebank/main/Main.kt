@@ -2,17 +2,16 @@ package one.digitalinnovation.digionebank.main
 
 import one.digitalinnovation.digionebank.enums.ClienteTipo
 import one.digitalinnovation.digionebank.models.Banco
+import one.digitalinnovation.digionebank.models.Funcionario
 import one.digitalinnovation.digionebank.models.Pessoa
+import java.math.BigDecimal
 
 fun main() {
-    ClienteTipo.values().forEach { x ->
-        println("$x: ${x.descricao}")
-    }
+    val pessoa = Funcionario(
+        nome = "Marcos Dênis",
+        cpf = "132.323.231-22",
+        salario = BigDecimal(3600.00)
+    )
 
-    val pf = ClienteTipo.PF
-    println(pf.descricao)
-
-    val pj = ClienteTipo.PJ
-    println(pj.descricao)
-
+    println("${pessoa.nome}\n${pessoa.cpf}")
 }

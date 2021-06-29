@@ -1,11 +1,6 @@
 package one.digitalinnovation.digionebank.models
 
-class Pessoa {
-    var nome: String = "Dênis"
-    var cpf: String = "123.456.789-10"
-        private set
-
-    constructor()
-
-    fun pessoaInfo() = "nome: $nome\ncpf: $cpf"
-}
+open class Pessoa(
+    open val nome: String,
+    open val cpf: String
+)
