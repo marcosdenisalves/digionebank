@@ -1,14 +1,18 @@
 package one.digitalinnovation.digionebank.main
 
+import one.digitalinnovation.digionebank.enums.ClienteTipo
 import one.digitalinnovation.digionebank.models.Banco
 import one.digitalinnovation.digionebank.models.Pessoa
 
 fun main() {
-    val bancoDigital = Banco(nome = "DigiOne", numero = 12)
-    println(bancoDigital.nome)
-    println(bancoDigital.numero)
+    ClienteTipo.values().forEach { x ->
+        println("$x: ${x.descricao}")
+    }
 
+    val pf = ClienteTipo.PF
+    println(pf.descricao)
 
-    var bancoDigital2 = bancoDigital.copy(nome = "Santander", numero = 6)
-    println(bancoDigital2.info())
+    val pj = ClienteTipo.PJ
+    println(pj.descricao)
+
 }
